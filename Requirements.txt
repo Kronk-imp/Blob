@@ -1,0 +1,6 @@
+cryptography>=42.0.0
+lxml>=5.0.0
+mitmproxy>=10.0.0
+playwright>=1.46.0
+pyzmq>=26.0.0
+requests>=2.32.0
