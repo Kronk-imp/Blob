@@ -1,0 +1,15 @@
+{"orderBy": "$key", "startAt": "", "endAt": "\uf8ff"}
+{"orderBy": "$value", "startAt": "", "endAt": "\uf8ff"}
+{"orderBy": "admin", "equalTo": true}
+{"orderBy": "password", "startAt": "", "endAt": "\uf8ff"}
+{"orderBy": "email", "startAt": "a", "endAt": "z\uf8ff"}
+{"orderBy": "username", "startAt": "admin", "endAt": "admin\uf8ff"}
+{"orderBy": "role", "equalTo": "admin"}
+{"orderBy": "createdAt", "startAt": 0, "endAt": 9999999999}
+{"orderBy": "age", "startAt": 0, "endAt": 100}
+{"orderBy": "score", "startAt": 1000}
+{"orderBy": "status", "equalTo": "active"}
+{"orderBy": "verified", "equalTo": false}
+{"orderBy": "subscription", "equalTo": "premium"}
+{"orderBy": "lastLogin", "startAt": 0, "endAt": 9999999999}
+{"orderBy": "location", "startAt": "A", "endAt": "Z\uf8ff"}

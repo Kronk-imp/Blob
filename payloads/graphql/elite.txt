@@ -1,0 +1,14 @@
+{__schema{types{name}}}
+{__schema{queryType{name}}}
+{__typename}
+query{__schema{types{name,fields{name}}}}
+mutation{__typename}
+subscription{__typename}
+query{users}
+query{user(id:1)}
+query{users{id,username,password}}
+{users(where:{id:1}){id,email,password}}
+{users(limit:10,offset:0){id,name}}
+query IntrospectionQuery{__schema{queryType{name}mutationType{name}subscriptionType{name}types{...FullType}directives{name description locations args{...InputValue}}}}
+query{__schema{types{name,kind,description,fields(includeDeprecated:true){name}}}}
+query{__type(name:"User"){name,fields{name,type{name}}}}

